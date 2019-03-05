@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: $main-font;
+  font-size: 14px;
+  line-height: 1.5em;
+}
+
+body {
+  width: 100%;
+  max-width: $global-width;
+  margin: 0 auto;   
+  background-color: #d8b036; 
+  background-position: top center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  @media (min-width: $large + 1) {
+    padding: 0 $gutter;
+  }
+
+  @media (max-width: $large) {
+    padding: 0 $gutter / 2;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #eeeeee;
+}
