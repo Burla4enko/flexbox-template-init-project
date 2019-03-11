@@ -18,38 +18,89 @@
 </head>
 
 <body>
-<div class="header">
-  <div class="header-logo">
-    <img class="header-logo__img" src="/assets/img/logo.png" alt="">
-    <div class="header-logo__title">FLEXBOX TEMPLATE</div>
-    <span class="header-logo__description">Шаблон с применением flexbox для первого модуля, курса Front-end Web Development</span>
-  </div>
-  <nav class="header-menu">
-    <div class="header-menu__btn">
-      <div class="header-menu__btn-row"></div>
-      <div class="header-menu__btn-row"></div>
-      <div class="header-menu__btn-row"></div>
+  <div class="header">
+    <div class="header-logo">
+      <img class="header-logo__img" src="/assets/img/logo.png" alt="">
+      <div class="header-logo__title">FLEXBOX TEMPLATE</div>
+      <span class="header-logo__description">Шаблон с применением flexbox для первого модуля, курса Front-end Web Development</span>
     </div>
-    <ul class="header-menu__list">
-      <li class="header-menu__list-item active">
-        <a href="#">Главная</a>
-      </li>
-      <li class="header-menu__list-item">
-        <a href="#">Страница</a>
-      </li>
-      <li class="header-menu__list-item">
-        <a href="#">Запись</a>
-      </li>
-      <li class="header-menu__list-item">
-        <a href="#">Контакты</a>
-      </li>
-      <li class="header-menu__list-item">
-        <a href="#">О нас</a>
-      </li>
-    </ul>
-  </nav>
-</div>
 
+    <nav class="header-menu">
+      <div class="header-menu__btn">
+        <div class="header-menu__btn-row"></div>
+        <div class="header-menu__btn-row"></div>
+        <div class="header-menu__btn-row"></div>
+      </div>    
+      <ul class="header-menu__list">
+        <li class="header-menu__list-item active">
+          <a href="#">Главная</a>
+        </li>
+        <li class="header-menu__list-item">
+          <a href="#">Страница</a>
+        </li>
+        <li class="header-menu__list-item">
+          <a href="#">Запись</a>
+        </li>
+        <li class="header-menu__list-item">
+          <a href="#">Контакты</a>
+        </li>
+        <li class="header-menu__list-item">
+          <a href="#">О нас</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="container">
+    <main class="main"></main>
+
+    <aside class="left-sidebar">
+      <div class="widget widget-search">
+        <h3>Поиск по сайту</h3>
+        <form method="get" action="#">
+          <i class="fas fa-search"></i>
+          <input class="search" type="text" placeholder="Введите текст и нажмите Enter">
+        </form>
+      </div>
+
+      <div class="widget widget-category">
+        <h3>Категории</h3>
+        <ul class="widget-category__list">
+          <li class="widget-category__list-item">
+            <a href="#">HTML4 / HTML5</a>
+          </li>
+          <li class="widget-category__list-item">
+            <a href="#">CSS2 / CSS3</a>
+          </li>
+          <li class="widget-category__list-item">
+            <a href="#">Javascript / Jquery</a>
+          </li>
+          <li class="widget-category__list-item">
+            <a href="#">PHP / MySQL</a>
+          </li>
+          <li class="widget-category__list-item">
+            <a href="#">Less / Sass / Scss</a>
+          </li>
+          <li class="widget-category__list-item">
+            <a href="#">Wordpress</a>
+          </li>
+          <li class="widget-category__list-item">
+            <a href="#">Drupal</a>
+          </li>
+          <li class="widget-category__list-item">
+            <a href="#">Bootstrap</a>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="widget widget-text">
+        <h3>О шаблоне</h3>
+        <p>Шаблон разработан для изучения адаптивной верстки на HTML5, оформления с помощью CSS3, подключения готовых библиотек и плагинов Jquery.</p>
+      </div>
+    </aside>
+
+    <aside class="right-sidebar"></aside>
+  </div>
   
 
   <script src="libs/jquery/dist/jquery.min.js"></script>

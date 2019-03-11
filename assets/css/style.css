@@ -494,11 +494,47 @@ a {
   color: #eeeeee;
 }
 
+p {
+  color: #cccccc;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.widget {
+  margin: 0 0 15px;
+  padding: 15px;
+  color: #eeeeee;
+  border-radius: 7px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.widget h3 {
+  margin-top: 5px;
+  padding-bottom: 10px;
+  letter-spacing: 1.5px;
+  border-bottom: 1px solid #333333;
+  font-family: "Lora", serif;
+  font-weight: 300;
+}
+
+.widget p {
+  line-height: 2em;
+}
+
+.widget p:last-child {
+  margin-bottom: 0;
+}
+
 .header {
   overflow: hidden;
   min-height: 100px;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 0 0 7px 7px;
+  margin-bottom: 30px;
 }
 
 .header-logo {
@@ -719,5 +755,87 @@ a {
 .header-menu__list-item.active a {
   color: #bb1a1a;
   background-color: rgba(0, 0, 0, 0.4);
+  text-shadow: 1px 1px 3px #000000,  1px 1px 10px #000000;
+}
+
+.main {
+  background-color: #ffffff;
+}
+
+.left-sidebar {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 220px;
+          flex: 0 0 220px;
+  margin-bottom: 15px;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.widget-search form {
+  position: relative;
+  margin: 15px 0 7px;
+}
+
+.widget-search .fa-search {
+  position: absolute;
+  margin-top: 1px;
+  padding: 7px 9px;
+  color: #eeeeee;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.widget-search input {
+  width: 100%;
+  padding: 7px 8px 7px 40px;
+  color: #cccccc;
+  text-overflow: ellipsis;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+  font-size: 12px;
+}
+
+.widget-search input::-webkit-input-placeholder {
+  color: #cccccc;
+}
+
+.widget-search input:-ms-input-placeholder {
+  color: #cccccc;
+}
+
+.widget-search input::-ms-input-placeholder {
+  color: #cccccc;
+}
+
+.widget-search input::placeholder {
+  color: #cccccc;
+}
+
+.widget-search input:focus {
+  color: #ffffff;
+  outline: none;
+  border: 1px solid #ffffff, 0.3;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.widget-category__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.widget-category__list-item a {
+  display: block;
+  padding: 5px 0;
+  border-radius: 4px;
+  -webkit-transition: padding-left 0.5s;
+  transition: padding-left 0.5s;
+}
+
+.widget-category__list-item a:hover {
+  padding-left: 10px;
+  color: #e12727;
+  background-color: rgba(0, 0, 0, 0.5);
   text-shadow: 1px 1px 3px #000000,  1px 1px 10px #000000;
 }
