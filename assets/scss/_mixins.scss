@@ -3,3 +3,20 @@
   1px 1px 3px #000000, 
   1px 1px 10px #000000;
 }
+
+@mixin text-shortener {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin news-text-block {
+  display: block;  
+  overflow: hidden;
+  max-height: 75px;
+  font-size: 13px;
+  line-height: 19px;
+  text-overflow: ellipsis;
+}

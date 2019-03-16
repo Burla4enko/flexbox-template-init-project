@@ -29,6 +29,11 @@ body {
 a {
   text-decoration: none;
   color: $text-color;
+
+  &:hover,
+  &:focus {
+    color: $main-color;
+  }
 }
 
 p {
@@ -37,6 +42,10 @@ p {
 
 .container {
   display: flex;
+
+  @media (max-width: $large) {
+    flex-wrap: wrap;
+  }
 }
 
 .widget {
@@ -62,4 +71,11 @@ p {
       margin-bottom: 0;
     }
   }
+}
+
+.img-responsive {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
