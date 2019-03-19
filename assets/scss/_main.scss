@@ -1,7 +1,7 @@
 .main {
   @media (min-width: $large + 1) {
     flex: 0 0 calc(100% - 220px - 240px);
-    padding: 0 $gutter / 2;
+    padding: 0 $gutter;
     order: 2;
   }
 
@@ -14,5 +14,130 @@
 
   @media (max-width: $middle) {
     order: 1;
+  }
+
+  &-breadcrump {
+    width: 100%;
+    margin-bottom: $gutter;
+    padding: 8px 12px;
+    text-align: right;
+    letter-spacing: 2px;
+    border-radius: 7px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+
+    span {
+      position: relative;
+      margin-right: 7px;
+      color: #cccccc;
+    }
+
+    a {
+      font-weight: bold;
+    }
+
+    i {
+      color: #cccccc;
+      font-weight: bold;
+    }
+  }
+
+  h1 {
+    margin: $gutter 0;
+    padding: 8px 12px;
+    letter-spacing: 3px;
+    color: $text-color;
+    border-radius: 7px;
+    font-family: $accent-font;
+    font-weight: 300;
+    line-height: 1.5em;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 90%, rgba(0, 0, 0, 0) 100%);
+
+    @media (min-width: $small + 1) {
+      font-size: 2rem;
+    }
+
+    @media (max-width: $small) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &-content__body {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -$gutter / 4;
+    margin-right: -$gutter / 4;
+    margin-bottom: $gutter - $gutter / 4;
+    margin-left: -$gutter / 4;   
+  }
+}
+.main-item {
+  padding: $gutter / 4;
+
+  @media (min-width: $small + 1) {
+    flex: 0 0 33.33%;
+  }
+
+  @media (max-width: $small) and (min-width: $xxsmall + 1) {
+    flex: 0 0 50%;
+  }
+
+  @media (max-width: $xxsmall) {
+    flex: 0 0 100%;
+  }
+
+  &__image {
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 5px solid rgba(0, 0, 0, 0.3);
+    border-radius: 7px;
+
+    h3 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 30px;
+      margin: 0;
+      padding: 7px;
+      color: #ffffff;
+      background-color: rgba(0, 0, 0, 0.5);
+      transition: background-color 0.5s;
+      text-shadow: 0 0 5px #000000;
+      font-size: 14px;
+      font-weight: 300;
+      text-align: center;
+      line-height: 1em;
+      letter-spacing: 1px;
+
+      @include text-shortener
+    }
+  }
+
+  &__excerpt {
+    position: absolute;
+    top: 101%;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 27px);
+    margin: 0;
+    padding: 15px;
+    text-align: center;
+    transition: top 0.5s ease-out, background-color 0.5s ease-out;      
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  &:hover {
+    h3 {
+      color: $main-color;
+      background-color: rgba(0, 0, 0, 0.75);
+
+      @include text-shadow
+    }
+
+    .main-item__excerpt {
+      top: 30px;
+      color: #ffffff;
+      background-color: rgba(0, 0, 0, 0.75);
+    }
   }
 }
